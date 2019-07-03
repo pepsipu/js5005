@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+    <title>js5005</title>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root" class="container">
+    <div class="col-md-12">
+        <ul class="nav nav-pills nav-justified mb-3 whiteBack rounded" id="ide" role="tablist" style="padding: 10px">
+            <li class="nav-item">
+                <a class="nav-link active" id="asm-tab" data-toggle="pill" href="#asm" role="tab"
+                   aria-controls="pills-home" aria-selected="true">Assembly</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="bin-tab" data-toggle="pill" href="#bin" role="tab" aria-controls="pills-profile"
+                   aria-selected="false">Binary</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="display-tab" data-toggle="pill" href="#display-toggle" role="tab" aria-controls="pills-profile"
+                   aria-selected="false">Display</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="ideContent">
+            <div class="tab-pane whiteBack rounded show active" id="asm" role="tabpanel" aria-labelledby="asm-tab">
+                <h3>assembly code</h3>
+                <textarea id="asm-code" rows="12" cols="35" class="whiteBack rounded textArea"></textarea>
+                <div id="asm-run">
+                </div>
+            </div>
+            <div class="tab-pane whiteBack rounded fade" id="bin" role="tabpanel" aria-labelledby="bin-tab">
+                <h3>binary code</h3>
+                <textarea id="bin-code" rows="12" cols="35" class="whiteBack rounded textArea"></textarea>
+                <div id="bin-run"></div>
+            </div>
+            <div class="tab-pane whiteBack rounded fade" id="display-toggle" role="tabpanel" aria-labelledby="bin-tab" style="padding: 30px">
+                <canvas id="display" height="128" width="128" style="border:1px solid #000000;"></canvas>
+            </div>
+        </div>
+        <br>
+        <div class="whiteBack rounded registers">
+            <h4>Ram Browser</h4>
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-dark" id="search-button">Search</button>
+                </span>
+                <input placeholder="0xdeadbeef" class="form-control" id="ram-search"/>
+            </div>
+            <span class="badge blackBack">result: <span class="badge whiteBack" id="search">no search yet!</span></span>
+        </div>
+        <br>
+        <div class="whiteBack rounded registers">
+            <h4>Registers</h4>
+            <div class="row">
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r0: <span class="badge whiteBack"
+                                                                                  id="r0">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r1: <span class="badge whiteBack"
+                                                                                  id="r1">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r2: <span class="badge whiteBack"
+                                                                                  id="r2">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r3: <span class="badge whiteBack"
+                                                                                  id="r3">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r4: <span class="badge whiteBack"
+                                                                                  id="r4">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r5: <span class="badge whiteBack"
+                                                                                  id="r5">0</span></span></div>
+            </div>
+            <div class="row">
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r6: <span class="badge whiteBack"
+                                                                                  id="r6">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r7: <span class="badge whiteBack"
+                                                                                  id="r7">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r8: <span class="badge whiteBack"
+                                                                                  id="r8">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r9: <span class="badge whiteBack"
+                                                                                  id="r9">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r10: <span class="badge whiteBack"
+                                                                                   id="r10">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r11: <span class="badge whiteBack"
+                                                                                   id="r11">0</span></span></div>
+            </div>
+            <div class="row">
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r12: <span class="badge whiteBack"
+                                                                                   id="r12">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r13: <span class="badge whiteBack"
+                                                                                   id="r13">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r14: <span class="badge whiteBack"
+                                                                                   id="r14">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">r15: <span class="badge whiteBack"
+                                                                                   id="r15">0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">rip: <span class="badge whiteBack"
+                                                                                   id="rip">0x0</span></span></div>
+                <div class="ml-3 mr-auto"><span class="badge blackBack">acc: <span class="badge whiteBack"
+                                                                                   id="acc">0</span></span></div>
+            </div>
+            <br>
+            <small>js5005 was made by Sammy "pepsipu" Hajhamid. Follow me on <a href="https://github.com/pepsipu">Github.</a></small>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

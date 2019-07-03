@@ -1,0 +1,29 @@
+{
+  "instructions": [
+    "nop",
+    "ldm",
+    "ld",
+    "xch",
+    "add",
+    "sub",
+    "inc",
+    "ret",
+    "jin",
+    "fch",
+    "jmp",
+    "call",
+    "cmp",
+    "je",
+    "jne",
+    "str",
+    "rr",
+    "rl",
+    "and",
+    "or",
+    "not",
+    "xor",
+    "dbg",
+    "colr",
+    "scrn"
+  ]
+}

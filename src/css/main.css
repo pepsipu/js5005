@@ -1,0 +1,35 @@
+#root {
+    font-family: 'Overpass', sans-serif;
+}
+body {
+    max-width: 800px;
+    padding: 50px 100px 100px;
+    background: url("../img/papyrus-dark.png");
+    text-align: center;
+    margin: 0 auto;
+}
+
+.whiteBack {
+    background: url("../img/papyrus.png");
+    color: black;
+}
+
+.registers {
+    font-size: 17px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.blackBack {
+    background: url("../img/papyrus-dark.png");
+    color: white;
+}
+.textArea {
+    resize: none;
+    outline: none;
+    overflow: auto;
+}
+
+#asm, #bin {
+    padding: 10px;
+}
