@@ -7,6 +7,7 @@ export default class CPU {
     instructionRegister = new Register();
     instructionMemory = new RAM(512);
     instructionList = [];
+    instructionNames = require("./instructions/instructionList").instructions;
     colorRegister = new Register();
     stack = [];
     ram = new RAM(256);
@@ -29,7 +30,7 @@ export default class CPU {
                 return;
             } else {
                 this.instructionDecode();
-                console.log(`~~${this.instructionList[this.instructionRegister.get()].name} ran, no errors~~`);
+                console.log(`~~${this.instructionNames[this.instructionRegister.get()]} ran, no errors~~`);
             }
             this.instructionPointer.set(this.instructionPointer.get() + 2);
         }
