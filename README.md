@@ -7,7 +7,7 @@ even though it's only 8 bits.
 
 A live version can be found at http://cpu.pepsipu.com/
 
-## Bug!
+#### Bug!
 For some reason, register prefixes are broken. You can still access registers, but instead of doing, for example, "cmp r3 r4", do "cmp 3 4". If you do not, it seems that all registers become r0. I'll implement a fix soon.
 
 ### Instruction Set
