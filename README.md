@@ -3,7 +3,12 @@ js5005 is a virtual CPU with every logic gate simulted. It is an upgraded versio
 tweaks and upgrades to allow better writing of code, including a built in register and RAM viewer. It's instruction set makes it versatile, 
 even though it's only 8 bits.
 
+### Check console for instructions being run and more debug information.
+
 A live version can be found at http://cpu.pepsipu.com/
+
+## Bug!
+For some reason, register prefixes are broken. You can still access registers, but instead of doing, for example, "cmp r3 r4", do "cmp 3 4". If you do not, it seems that all registers become r0. I'll implement a fix soon.
 
 ### Instruction Set
 ##### nop - 0x0 - 00000000
